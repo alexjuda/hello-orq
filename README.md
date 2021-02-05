@@ -33,3 +33,5 @@ Results:
 
 - I can see only a single step despite the caption telling otherwise.
     - "Note that this workflow has another step after the first greeting step. That step is added in the next tutorial, Hello Component"
+    
+- It'd be cool to create another function in tutorial page 2, not the exact copy of the one used on page 1.
