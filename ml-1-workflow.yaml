@@ -1,0 +1,33 @@
+name: ml-1
+
+
+imports:
+- name: sklearn-component
+  type: git
+  parameters:
+    repository: "git@github.com:zapatacomputing/tutorial-orquestra-sklearn.git"
+    branch: "master"
+
+
+steps:
+- name: perceptron-training
+  config:
+    runtime:
+      language: python3
+      imports: [sklearn-component]
+      parameters:
+        file: sklearn-component/steps/ml_tutorial_1_step.py
+        function: generate_train_step
+  inputs:
+    - dataset_name: "simple_dataset"
+      type: string
+    - model_name: "svm"
+      type: string
+  outputs:
+  - name: result
+    type: output_type
+
+
+
+types:
+- output_type
