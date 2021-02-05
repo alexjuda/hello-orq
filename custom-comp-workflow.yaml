@@ -1,0 +1,32 @@
+# Workflow API version
+apiVersion: io.orquestra.workflow/1.0.0
+
+# Prefix for workflow ID
+name: hello-workflow-2
+
+# List components needed by workflow.
+imports:
+
+# A component named `welcome-to-orquestra` that is a public git repo. All the fields here are required except branch, which defaults to main.
+- name: hello-orq
+  type: git
+  parameters:
+    repository: "git@github.com:alexjuda/hello-orq.git"
+    branch: "main"
+
+steps:
+
+- name: greeting
+  config:
+    runtime:
+      language: python3
+      imports: [hello-orq]
+      parameters:
+        file: hello-orq/welcome.py
+        function: welcome2
+  outputs:
+  - name: welcome2
+    type: message
+
+types:
+- message
