@@ -41,3 +41,7 @@ Results:
 - What's the purpose of specifying "types"? Seems like it doesn't provide any new information to the system.
 
 - Broken link in http://docs.orquestra.io/tutorials/ml-basic-3/#6-combining-code-from-different-components
+
+- sequential-uuids instead of UUIDs?
+
+- shell autocompletion, including workflow IDs?
