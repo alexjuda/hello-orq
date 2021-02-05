@@ -5,11 +5,11 @@ apiVersion: io.orquestra.workflow/1.0.0
 name: qcbm-opt
 
 imports:
-- name: bars-and-stripes
+- name: hello-orq
   type: git
   parameters:
     repository: "git@github.com:alexjuda/hello-orq.git"
-    branch: "master"
+    branch: "main"
 - name: z-quantum-core
   type: git
   parameters:
@@ -69,9 +69,9 @@ steps:
   config:
     runtime:
       language: python3
-      imports: [z-quantum-core, bars-and-stripes]
+      imports: [z-quantum-core, hello-orq]
       parameters:
-        file: bars-and-stripes/target.py
+        file: target.py
         function: get_bars_and_stripes_target_distribution
     resources:
       cpu: "1000m"
