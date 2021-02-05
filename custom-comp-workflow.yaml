@@ -25,7 +25,7 @@ steps:
         file: hello-orq/welcome.py
         function: welcome2
   outputs:
-  - name: welcome2
+  - name: greeting2
     type: message
 
 types:
