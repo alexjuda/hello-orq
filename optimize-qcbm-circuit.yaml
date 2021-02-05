@@ -8,7 +8,7 @@ imports:
 - name: bars-and-stripes
   type: git
   parameters:
-    repository: "git@github.com:<your github username>/<your github repository name>.git"
+    repository: "git@github.com:alexjuda/hello-orq.git"
     branch: "master"
 - name: z-quantum-core
   type: git
